@@ -36,17 +36,35 @@
     return json_encode($response, JSON_PRETTY_PRINT);
   }
 
+
+  $output  = "";
+
   for($i = 0 ; $i<$conf["serverMaxCount"]; $i++){
-    $output  = "";
     $url     = "https://nordvpn.com/wp-admin/admin-ajax.php?action=servers_recommendations&filters={%22country_id%22:$i}";
     $servers = json_decode(getUrl($url), true);
-
     if(count($servers)>0){
       for($n=0; $n < count($servers); $n++){
-        $output .= $servers[$n]['hostname']."\n";
+        $results[] = $servers[$n]['hostname'];
       }
-      print $output;
     }
   }
+
+  // OUTPUT
+  if(!$_GET['type']){
+    for($n=0; $n < count($results); $n++){
+      $output .= $results[$n]."\n";
+    }
+//  } elseif ($_GET['json']) {
+//    // code...
+//  } elseif ($_GET['js']) {
+//    // code...
+  } elseif ($_GET['csv']) {
+    for($n=0; $n < count($results); $n++){
+      $output .= $results[$n].",";
+    }
+  }
+
+
+  print $output;
 
 ?>
