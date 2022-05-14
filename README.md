@@ -39,7 +39,8 @@ If you do not want to copy these files just comment out the line starting '_$con
 
 ### Configuration
 
-To get this working on your setup you'll need to configure a handful of parameters. These are all at the start of the script and are prefixed $conf[VAR_NAME]  
+To get this working on your setup you'll need to configure a handful of parameters. 
+These are all at the start of the script and are prefixed $conf[VAR_NAME]  
 
          //////////////////////////////////////////////////////////////////////////////////////////
          // CONFIGURATION
