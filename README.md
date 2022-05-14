@@ -39,24 +39,19 @@ To get this working on your setup you'll need to configure a handful of paramete
          //////////////////////////////////////////////////////////////////////////////////////////
          // CONFIGURATION
          //////////////////////////////////////////////////////////////////////////////////////////
-           $conf\["installDir"\]     = "DIR\_IN\_WHICH\_THIS\_SCRIPT\_WILL\_RUN";  // the dir this script is installed in eg; /home/nordVPN/
-           $conf\["destinationDir"\] = "DIR\_TO\_COPY\_FILES\_TO";               // the dir into which you want to copy the serverlist files eg; /home/www/nord/
-           $conf\["filename"\]       = "serverlist";                         // name of the files output , these are appended by file extensions in the next line
-           $conf\["output\_types"\]   = \['txt','json','js','csv','log'\];      // list of support file outut types
-           $conf\["serverMaxCount"\] = 300;                                  // each country is represented as a number, 200 should mean we capture all known countries - this needs optimising!
+           $conf["installDir"]     = __DIR__ . "/";  // the dir this script is installed in eg; /home/nordVPN/
+           $conf["destinationDir"] = "DIR_TO_COPY_FILES_TO";               // the dir into which you want to copy the serverlist files eg; /home/www/nord/
+           $conf["filename"]       = "serverlist";                         // name of the files output , these are appended by file extensions in the next line
+           $conf["output_types"]   = ['txt','json','js','csv','log'];      // list of support file outut types
+           $conf["serverMaxCount"] = 300;                                  // each country is represented as a number, 200 should mean we capture all known countries - this needs optimising!
          //////////////////////////////////////////////////////////////////////////////////////////
         
 
 Crontab:  
 Change the location according to where you've installed this script. The following will execute every 15mins
 
-        \*/15 \* \* \* \* php /DIR\_IN\_WHICH\_THIS\_SCRIPT\_WILL\_RUN/getActiveServers.php
+        */15 * * * * php /DIR_IN_WHICH_THIS_SCRIPT_WILL_RUN/getActiveServers.php
         
 
 Permissions:  
 This shoudl all work as is... however, you may need to ensure you have permissions to write and copy fils to the respective directories.
-
-### Contact
-
-[\[email protected\]](/cdn-cgi/l/email-protection)  
-[\[email protected\]](/cdn-cgi/l/email-protection)
