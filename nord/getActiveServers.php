@@ -20,7 +20,7 @@ header("Content-Type: text/plain");
 //////////////////////////////////////////////////////////////////////////////////////////
 // CONFIGURATION
 //////////////////////////////////////////////////////////////////////////////////////////
-  $conf["installDir"]     = "DIR_PATH_OF_THIS_SCRIPT";;  // the dir this script is installed to
+  $conf["installDir"]     = "DIR_PATH_OF_THIS_SCRIPT";  // the dir this script is installed to
   $conf["destinationDir"] = "DIR_PATH_OF_WHERE_FILES_ARE_COPIED_TO";  // the dir into which ou want to copy tyhr serverlist files
   $conf["filename"]       = "serverlist";  // name of the files output
   $conf["output_types"]   = ['txt','json','js','csv','log'];
