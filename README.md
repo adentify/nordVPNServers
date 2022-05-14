@@ -52,6 +52,8 @@ These are all at the start of the script and are prefixed $conf[VAR_NAME]
            $conf["serverMaxCount"] = 300;                                  // each country is represented as a number, 200 should mean we capture all known countries - this needs optimising!
          //////////////////////////////////////////////////////////////////////////////////////////
         
+NB: If you do not want to copy files to a production web folder then simply comment the line out.
+
 
 Crontab:  
 Change the location according to where you've installed this script. The following will execute every 15mins
