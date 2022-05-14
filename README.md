@@ -15,8 +15,6 @@ We wanted to find a way to access ONLY active servers and this tool is the resul
 
 Every 15mins (via crontab) this tool checks the current active servers from the Nord website (URL) and provides this in easily consumable files that can be loaded into your app as json, js, txt or csv values.
 
-**Latest Update: Saturday 14th of May 2022 06:08:49 PM**
-
 [serverlist.txt](serverlist.txt) - returns a formatted list of servers, one domain per line  
 [serverlist.json](serverlist.json) - a json array of servers  
 [serverlist.js](serverlist.js) - returns an array called '_nordServers_'  
