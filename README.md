@@ -19,7 +19,7 @@ Every 15mins (via crontab) this tool checks the current active servers from the 
 [serverlist.json](serverlist.json) - a json array of servers  
 [serverlist.js](serverlist.js) - returns an array called '_nordServers_'  
 [serverlist.csv](serverlist.csv) - csv delimited list of servers  
-[serverlist.log](serverlist.log) - Date/Time when these file last updated  
+[serverlist.log](serverlist.log) - plain ntext file with Date/Time when these file last updated  
 
 ### About the code
 
